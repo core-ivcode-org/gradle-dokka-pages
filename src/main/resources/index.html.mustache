@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        .module {
+            margin-bottom: 30px;
+        }
+
+        .module h2 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 6px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin: 6px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #1a73e8;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Documentation</h1>
+
+{{#modules}}
+    <div class="module">
+        <h2>{{name}}</h2>
+
+        <ul>
+            {{#links}}
+                <li>
+                    <a href="{{.}}">{{.}}</a>
+                </li>
+            {{/links}}
+        </ul>
+    </div>
+{{/modules}}
+
+</body>
+</html>
